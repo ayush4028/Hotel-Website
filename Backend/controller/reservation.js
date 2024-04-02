@@ -3,6 +3,7 @@ import { Reservation } from "../models/reservationSchema.js";
 
 export const sendReservation = async (req, res, next) => {
   const { firstName, lastName, email, phone, date, time } = req.body;
+  console.log(req.body)
   if (!firstName || !lastName || !email || !phone || !date || !time) {
     return next(new ErrorHandler("Please fill food reservation form!", 400));
   }
@@ -13,6 +14,8 @@ export const sendReservation = async (req, res, next) => {
       message: "Reservation sent successfully!",
     });
   } catch (error) {
+    console.log(error);
+    
     if (error.name === "ValidationError") {
       const validationErrors = Object
         .values(error.errors)

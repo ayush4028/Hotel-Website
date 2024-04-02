@@ -1,9 +1,22 @@
 import React from 'react'
+import HeroSection from '../components/HeroSection'
+import About from '../components/About.jsx'
+import Qualities from '../components/Qualities.jsx'
+import Menu from '../components/Menu.jsx'
+import WhoAreWe from '../components/WhoAreWe.jsx'
+import Team from '../components/Team.jsx'
+import Reservation from '../components/Reservation.jsx'
 
 const Home = () => {
   return (
     <>
-        <h1>Home Page</h1>
+        <HeroSection />
+        <About/>
+        <Qualities/>
+        <Menu/>
+        <WhoAreWe />
+        <Team/>
+        <Reservation />
     </>
   )
 }
