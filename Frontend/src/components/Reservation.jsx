@@ -19,7 +19,7 @@ const Reservation = () => {
     try {
       console.log({firstName, lastName, email, phone, time, date});
       const { data } = await axios.post(
-        "http://localhost:4000/api/v1/reservation/send",
+        "https://hotel-website-1-odfp.onrender.com/api/v1/reservation/send",
         { firstName, lastName, email, phone, time, date },
         
       );
